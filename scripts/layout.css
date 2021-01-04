@@ -200,6 +200,11 @@ A.link
 }
 TD.link
 {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 8pt;
+    COLOR: blue;
+    FONT-FAMILY: Verdana, Tahoma, Arial;
+    TEXT-DECORATION: none
 }
 A.link:hover
 {
