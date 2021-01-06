@@ -1,19 +1,18 @@
 on: push
-name: 🚀 Deploy website on push
+name: Publish Website
 jobs:
   web-deploy:
-    name: 🎉 Deploy
+    name: 🚀 Deploy website every commit
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
-      uses: actions/checkout@v2.3.2
+      uses: actions/checkout@v2.1.0
     
     - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      uses: SamKirkland/web-deploy@1.0.0
       with:
-        server: sftp.beautique-in.nl
-        username: 346741
-        password: ${{ secrets.ftp_password }}
-        port: 22
-        METHOD: sftp
-        dry-run: true
+        target-server: sftp.beautique-in.nl
+        remote-user: 346741
+        remote-key: ${{ secrets.ftp_password }}
+        rsync-options: --dry-run
+         
