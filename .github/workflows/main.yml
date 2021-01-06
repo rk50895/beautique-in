@@ -11,8 +11,6 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/web-deploy@1.0.0
       with:
-        target-server: sftp.beautique-in.nl
-        remote-user: 346741
-        remote-key: ${{ secrets.ftp_password }}
-        rsync-options: --dry-run --insecure
-         
+        target-server: ${{ secrets.TARGET_SERVER }}
+        remote-user: ${{ secrets.REMOTE_USER }}
+        remote-key: ${{ secrets.REMOTE_KEY }}       
