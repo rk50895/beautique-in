@@ -14,5 +14,5 @@ jobs:
         target-server: sftp.beautique-in.nl
         remote-user: 346741
         remote-key: ${{ secrets.ftp_password }}
-        rsync-options: --dry-run
+        rsync-options: --dry-run --insecure
          
