@@ -17,4 +17,4 @@ jobs:
         PASSWORD: ${{ secrets.REMOTE_KEY }}
         PORT: 22
         DIR_ON_SERVER: /public/sites/www.beautique-in.nl/
-        MODE: FULL
+        MODE: GIT
