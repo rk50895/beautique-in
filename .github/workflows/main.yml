@@ -11,6 +11,11 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
-        server: ${{ secrets.TARGET_SERVER }}
-        username: ${{ secrets.REMOTE_USER }}
-        password: ${{ secrets.REMOTE_KEY }}
+        server: sftp.beautique-in.nl
+        username: 346741
+        password: QW2qw2qw
+        local-dir: C:\Users\rk50895\Documents\GitHub\beautique-in
+        server-dir: /public/sites/www.beautique-in.nl
+        exclude: .git*
+          - .git*/**
+          - README.md
