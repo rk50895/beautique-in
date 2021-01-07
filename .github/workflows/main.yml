@@ -8,15 +8,13 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2.3.2
     
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+    - name: SFTP Deploy
+      uses: wlixcc/SFTP-Deploy-Action@1.1
       with:
         server: sftp.beautique-in.nl
         username: 346741
-        password: QW2qw2qw
+        ssh_private_key: QW2qw2qw
         port: 22
-        log-level: verbose
-        server-dir: /public/sites/www.beautique-in.nl/
-        exclude: .git*
-          - .git*/**
-          - README.md
+        local_path: './*'
+        remote_path: '/public/sites/www.beautique-in.nl/'
+        args: '-o ConnectTimeout=5'
