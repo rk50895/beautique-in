@@ -14,7 +14,7 @@ jobs:
       env:
         HOST: sftp.beautique-in.nl
         USER: 346741
-        PASSWORD: QW2qw2qw
+        PASSWORD: ${{ secrets.REMOTE_KEY }}
         PORT: 22
         DIR_ON_SERVER: /public/sites/www.beautique-in.nl/
-        MODE: GIT
+        MODE: FULL
