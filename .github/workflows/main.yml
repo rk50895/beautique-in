@@ -17,5 +17,4 @@ jobs:
         PASSWORD: QW2qw2qw
         PORT: 22
         DIR_ON_SERVER: /public/sites/www.beautique-in.nl/
-        USE_COMMAND_BEFOR_UPDATE: pwd
-        USE_COMMAND_AFTER_UPDATE: ls -la
+        MODE: GIT
