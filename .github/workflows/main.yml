@@ -15,6 +15,7 @@ jobs:
         username: 346741
         password: QW2qw2qw
         port: 22
+        log-level: verbose
         server-dir: /public/sites/www.beautique-in.nl/
         exclude: .git*
           - .git*/**
